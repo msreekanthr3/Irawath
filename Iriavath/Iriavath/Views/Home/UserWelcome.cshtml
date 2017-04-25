@@ -1,0 +1,167 @@
+﻿@{
+    ViewBag.Title = "UserWelcome";
+}
+
+<style>
+#mySidenav a {
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+    left: 0;
+}
+#mySidenav a:focus{
+ position: absolute;
+ left: 0;
+}
+#about {
+    top: 50px;
+    background-color: #4CAF50;
+}
+
+#blog {
+    top: 150px;
+    background-color: #2196F3;
+}
+
+#projects {
+    top: 250px;
+    background-color: #f44336;
+}
+
+#contact {
+    top: 350px;
+    background-color: #555;
+}
+.divleft {
+margin-left :100px;
+height :500px;
+
+}
+header{
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+    footer {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          padding: 1rem;
+          text-align: center;
+          background-color: black;
+          color: white;
+    }
+    .sidenav a {
+        margin: 10px 10px 10px 0px;
+    }
+</style>
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.divleft').hide();
+
+        $("#about").click(function () {
+            
+            $("#abt").show();
+            $("#blg").hide();
+            $("#prj").hide();
+            $("#cnt").hide();
+            $(".openDiv").hide();
+
+        });
+
+
+        $("#blog").click(function () {
+            
+            $("#abt").hide();
+            $("#blg").show();
+            $("#prj").hide();
+            $("#cnt").hide();
+            $(".openDiv").hide();
+        });
+
+
+        $("#projects").click(function () {
+            
+            $("#abt").hide();
+            $("#blg").hide();
+            $("#prj").show();
+            $("#cnt").hide();
+            $(".openDiv").hide();
+        });
+
+        $("#contact").click(function () {
+            window.location.href = "/Home/Index"
+            $("#abt").hide();
+            $("#blg").hide();
+            $("#prj").hide();
+            $("#cnt").show();
+            $(".openDiv").hide();
+        });
+    });
+
+</script>
+
+<div class="container">
+
+<header>
+   <h1>Irawath User</h1>
+</header>
+  
+<div id="mySidenav" class="sidenav" style="position:absolute">
+  <a href="#" id="about">Appointment</a>
+  <a href="#" id="blog">MemberShip</a>
+  <a href="#" id="projects">Profile</a>
+  <a href="#" id="contact">Log Out</a>
+</div>
+
+<article>
+   <div style="margin-left :100px;height :500px;" class="openDiv">
+
+   </div>
+  <div id="abt" class="divleft">
+Appointment
+      
+</div>
+
+<div id="blg" class="divleft">
+MemberShip
+</div>
+
+<div id="prj" class="divleft">
+Profile
+</div>
+
+<div id="cnt" class="divleft">
+Log Out
+</div>
+</article>
+
+<footer>Copyright &copy; Irawath</footer>
+
+</div>
+
+@*<div id="mySidenav" class="sidenav">
+  <a href="#" id="about">About</a>
+  <a href="#" id="blog">Blog</a>
+  <a href="#" id="projects">Projects</a>
+  <a href="#" id="contact">Contact</a>
+</div>*@

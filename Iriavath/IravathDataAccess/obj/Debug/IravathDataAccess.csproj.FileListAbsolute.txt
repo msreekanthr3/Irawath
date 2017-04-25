@@ -1,0 +1,6 @@
+F:\New folder\Iriavath\IravathDataAccess\bin\Debug\IravathDataAccess.dll
+F:\New folder\Iriavath\IravathDataAccess\bin\Debug\IravathDataAccess.pdb
+F:\New folder\Iriavath\IravathDataAccess\bin\Debug\Microsoft.ApplicationBlocks.Data.dll
+F:\New folder\Iriavath\IravathDataAccess\obj\Debug\IravathDataAccess.csprojResolveAssemblyReference.cache
+F:\New folder\Iriavath\IravathDataAccess\obj\Debug\IravathDataAccess.dll
+F:\New folder\Iriavath\IravathDataAccess\obj\Debug\IravathDataAccess.pdb

@@ -1,0 +1,552 @@
+﻿@model Iriavath.Models.UserInfo
+@{
+    ViewBag.Title = "Index";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Irawath Ayurvedic</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,400italic'>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/ekko-lightbox.min.css">   
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <link href="~/css/LoginStyle.css" rel="stylesheet" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
+    <script src="~/js/login.js"></script>
+    <script src="~/js/Home.js"></script>
+
+
+    <style>
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+
+        .button1 {
+            background-color: white;
+            color: black;
+            border: 2px solid #555555;
+        }
+
+        .button2 {
+            background-color: white;
+            color: black;
+            border: 2px solid #555555;
+        }
+
+        .button3 {
+            background-color: white;
+            color: black;
+            border: 2px solid #555555;
+        }
+
+        .button4 {
+            background-color: white;
+            color: black;
+            border: 2px solid #555555;
+        }
+
+        .button5 {
+            background-color: white;
+            color: black;
+            border: 2px solid #555555;
+        }
+
+        div.container-fluid {
+            position: static;
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+       
+        
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+            // run the currently selected effect
+            function runEffect() {
+                // get effect type from
+                var selectedEffect = 'Slide';
+
+                // Most effect types need no options passed by default
+                var options = {};
+                // some effects have required parameters
+                if (selectedEffect === "scale") {
+                    options = { percent: 50 };
+                } else if (selectedEffect === "size") {
+                    options = { to: { width: 280, height: 185 } };
+                }
+                alert();
+                // Run the effect
+                $('#effect').hide().html(data).show('slow');
+                $("#effect").show(10000);
+                //$("#effect").show(selectedEffect, options, 500, callback);
+            };
+
+            //callback function to bring a hidden box back
+            function callback() {
+            };
+
+            // Set effect from select menu value
+            $("#button").on("click", function () {
+                
+                runEffect();
+            });
+
+           // $("#effect").hide();
+        });
+      
+  </script>
+   
+</head>
+
+<body>
+
+    <header id="top">
+     
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 site-title">
+                    <h1><b>Irawath Ayuvadic</b></h1>
+                </div>
+            </div>
+            <nav class="navbar navbar-light">
+                <ul class="nav navbar-nav single-page-nav">
+                    <li class="nav-item">
+                        <a class="nav-link current" href="#home">Home
+                            <!-- <span class="sr-only">(current)</span> -->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Membership">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            @*<a class="btn btn-primary dropdown-toggle" href="#" data-rel="popup2" id="menu1"  >Login</a>*@
+                            <a href="#" id="RegisterButton"><span>Register</span><em></em></a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            @*<a class="btn btn-primary dropdown-toggle" href="#" data-rel="popup2" id="menu1"  >Login</a>*@
+                            <a href="#" id="loginButton"><span>Login</span><em></em></a>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+
+
+
+
+
+            <div id="container">
+                <div id="loginContainer">
+                    <div style="clear: both"></div>
+                    <div id="loginBox">
+                        <form id="loginForm">
+                                <input type="text" name="email1" placeholder="Username" id="emaillogin" /><br />
+                                <input type="password" placeholder="Password" name="password" id="passwordlogin" /><br />
+                                
+                                <input id="btnLogin" value="login">
+                            
+                            <span><a href="#">Forgot your password?</a></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="container2">
+                <div id="loginContainer2">
+                    <div style="clear: both"></div>
+                    <div id="loginBox2">
+                        <form id="loginForm2" >
+                            <fieldset id="body2">
+                              
+                                @Html.TextBoxFor(a => a.UserName, new { placeholder="User Name",name="email", id="txtUsername"})                              
+                                @Html.TextBoxFor(a=>a.Password,new { placeholder="Password",name="password1",Type="password", id="txtpassword"})
+                                <input type="password" name="user" id="Text11" placeholder="Conformpassword"> 
+                                <table>
+                                    <tr>
+                                        <td style="width:80px; align-content:center"> 
+                                            <b>Male :</b>  @Html.RadioButtonFor(m => m.Gender, "Male", new {id="rdbMale" })
+                                        </td>
+                                        <td> <b>Female :</b> @Html.RadioButtonFor(m => m.Gender,"Female",new {id="rdbFemale" }) </td>
+                                    </tr>
+                                </table>      
+                                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                                                                                     
+                                @Html.TextBoxFor(a=>a.Email,new { placeholder="Email Id",name="Text22", id="txtEmail"})                                
+                                @Html.TextBoxFor(a=>a.PhNumber,new { placeholder="Phone No",name="Text33",type="numbers" ,min="0", step="1",maxlength="10", id="txtPhone"})
+                              
+                                 <input id="insertUser" data-inline="true" value="Register">
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+         
+    </header>
+
+
+    <section id="home">
+        <div class="container-fluid">
+            <div>
+                <div>
+                    <img src="~/images/1.jpg" class="mySlides" style="width: 970px; height: 400px" />
+                    <img src="~/images/10.jpg" class="mySlides" style="width: 970px; height: 400px" />
+                    <img src="~/images/11.jpg" class="mySlides" style="width: 970px; height: 400px" />
+                    <img src="~/images/2.jpg" class="mySlides" style="width: 970px; height: 400px" />
+                    <img src="~/images/21622-Front.png" class="mySlides" style="width: 970px; height: 400px" />
+                    <img src="~/images/3.jpg" class="mySlides" style="width: 970px; height: 400px" />
+                    <img src="~/images/4.jpg" class="mySlides" style="width: 970px; height: 400px" />
+                    <img src="~/images/5.jpg" class="mySlides" style="width: 970px; height: 400px" />
+                    <img src="~/images/6.jpg" class="mySlides" style="width: 970px; height: 400px" />
+                    <img src="~/images/7.jpg" class="mySlides" style="width: 970px; height: 400px" />
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="Membership">
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="row sigma-home single-page-nav">
+
+
+                    <table class="auto-style1">
+                        <tr>
+                            <td>
+                                <div style="font-family: vandhana; font-size: 100%;">
+                                   <img src="~/images/1.png" />&nbsp;
+                          <div style="text-align: center; font-size: 100%;">
+                                  Romesh Romesh Romesh Romesh Romesh Romesh
+                            RomeshR ome shRom eshRomeshR omeshRomesh
+                            RomeshRomesh...<br />
+                              <button style="width: 160px;" id="button" class="button button1">Readmore</button>
+                          </div>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div style="text-align: center;">
+                                    <img src="~/images/2.png" />&nbsp;
+                     <div style="font-family: vandhana; font-size: 100%;">
+                         
+                             Romesh Romesh Romesh Romesh Romesh Romesh
+                            RomeshR ome shRom eshRomeshR omeshRomesh
+                            RomeshRomesh...<br />
+                         
+                         <button style="width: 160px;" class="button button2">Readmore</button>
+                     </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div style="text-align: center;">
+                                    <img src="~/images/3.png" />&nbsp;
+                         <div style="font-family: vandhana; font-size: 100%;">
+                            
+                                 Romesh Romesh Romesh Romesh Romesh Romesh
+                            RomeshR ome shRom eshRomeshR omeshRomesh
+                            RomeshRomesh...<br />
+                             <button style="width: 160px;" class="button button3">Readmore</button>
+                         </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                    <table class="auto-style2">
+                        <tr>
+                            <td>
+                                <div style="text-align: center;">
+                                    <img src="~/images/4.png" />&nbsp;
+                         <div style="font-family: vandhana; font-size: 100%;">
+                            
+                                 Romesh Romesh Romesh Romesh Romesh Romesh
+                            RomeshR ome shRom eshRomeshR omeshRomesh
+                            RomeshRomesh...<br />
+                           
+                             <button style="width: 160px;" class="button button4">Readmore</button>
+                         </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div style="text-align: center;">
+                                    <img src="~/images/5.png" />&nbsp;
+                          <div style="font-family: vandhana;  font-size: 100%;">
+                            
+                                  Romesh Romesh Romesh Romesh Romesh Romesh
+                            RomeshR ome shRom eshRomeshR omeshRomesh
+                            RomeshRomesh...<br />
+                           
+                              <button style="width: 160px;" class="button button5">Readmore</button>
+                          </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="toggler">
+
+</div>
+    </section>
+
+    <section id="about">
+
+        <div class="container-fluid">
+
+            <div class="row sigma-section-header">
+                <div class="col-md-offset-2 col-lg-offset-3 col-lg-6 col-md-8 col-sm-12 text-center">
+                    <h1>About Us</h1>
+                    <p>Sed elit elit, dictum eu turpis non, fringilla efficitur ipsum. Phasellus ultrices, nunc et tempus porta, tellus purus elementum ex, volutpat lobortis orci dolor in tortor.</p>
+                </div>
+            </div>
+
+            <div class="row single-page-nav">
+
+                <div class="sigma-content col-lg-4 col-md-6 sigma-bg-lightgray">
+                    <h2>01 Design</h2>
+                    <p>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.</p>
+                </div>
+                <div class="sigma-content col-lg-4 col-md-6 sigma-bg-gray">
+                    <h2>02 Coding</h2>
+                    <p>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.</p>
+                </div>
+                <div class="sigma-content col-lg-4 col-md-12 sigma-bg-darkgray">
+                    <h2>03 Mobile Ready</h2>
+                    <p>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.</p>
+                </div>
+
+                <div class="sigma-content col-lg-6 col-md-6 sigma-bg-pink">
+                    <h2>Left Column</h2>
+                    <p>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.</p>
+                    <a href="#about" class="btn btn-primary btn-lg">Read Detail</a>
+                </div>
+                <div class="sigma-content col-lg-6 col-md-6 sigma-bg-lightblue">
+                    <h2>Right Column</h2>
+                    <p>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.</p>
+                    <a href="#contact" class="btn btn-danger btn-lg">Learn More</a>
+                </div>
+
+                <div class="sigma-content col-lg-3 col-md-6 sigma-bg-red">
+                    <h2>Our Team</h2>
+                    <p>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.</p>
+                </div>
+                <div class="sigma-content col-lg-3 col-md-6 sigma-bg-blue">
+                    <h2>History</h2>
+                    <p>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.</p>
+                </div>
+                <div class="sigma-content col-lg-3 col-md-6 sigma-bg-green">
+                    <h2>Management</h2>
+                    <p>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.</p>
+                </div>
+                <div class="sigma-content col-lg-3 col-md-6 sigma-bg-yellow">
+                    <h2>Career</h2>
+                    <p>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi. Praesent ornare massa vehicula.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contact">
+
+        <div class="container-fluid">
+
+            <div class="row sigma-section-header">
+                <div class="col-md-offset-2 col-lg-offset-3 col-lg-6 col-md-8 col-sm-12 text-center">
+                    <h1>Contact</h1>
+                    <p>You may <a rel="nofollow" href="http://www.templatemo.com/contact" target="_parent">contact</a> templatemo if you have any question. Suspendisse dolor purus, malesuada ut luctus quis, consectetur vel ante. Integer a pulvinar orci.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="sigmano col-lg-8 col-md-12">
+
+                    <form action="#contact" method="post" id="contact-form">
+                        <div class="col-md-6">
+                            <fieldset class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Write a full name">
+                            </fieldset>
+
+                            <fieldset class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            </fieldset>
+
+                            <fieldset class="form-group">
+                                <label for="budget">Your Budget</label>
+                                <select class="form-control" id="budget">
+                                    <option>$500</option>
+                                    <option>$1,000</option>
+                                    <option>$1,500</option>
+                                    <option>$2,000</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6">
+
+                            <fieldset class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" class="form-control" id="subject" placeholder="Subject">
+                            </fieldset>
+
+                            <fieldset class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Write a message"></textarea>
+                            </fieldset>
+
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                    I am not a robot.
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="sigma-content col-lg-4 col-md-12">
+                    <h3>Our Address</h3>
+                    <p>
+                        Suspendisse dolor purus, malesuada ut luctus quis, consectetur vel ante. 
+                Integer a pulvinar orci, eget sagittis enim.
+                    </p>
+                    <p><span class="contact-icon fa fa-envelope-o"></span>Email: irawathspa@gmail.com</p>
+                    <p><span class="contact-icon fa fa-phone"></span>Phone: 070-070-0880</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <hr class="sigma-hr">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="sigma-copyright col-lg-8">
+                    <p>Copyright © 2016 Sigma HTML CSS Template</p>
+                </div>
+
+                <div class="sigma-copyright col-lg-4 single-page-nav text-right">
+                    <p><a href="#top">Go to top</a></p>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ekko-lightbox.min.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>
+    <script>
+        //For slidin images in home age
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+        // Prevent console.log from generating errors in IE for the purposes of the demo
+        if (!window.console) console = { log: function () { } };
+
+        // The actual plugin
+        $('.single-page-nav').singlePageNav({
+            offset: $('.single-page-nav').outerHeight(),
+            filter: ':not(.external)',
+            updateHash: true,
+            beforeStart: function () {
+                console.log('begin scrolling');
+            },
+            onComplete: function () {
+                console.log('done scrolling');
+            }
+        });
+
+        $(document).ready(function ($) {
+
+            // delegate calls to data-toggle="lightbox"
+            $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
+                event.preventDefault();
+                return $(this).ekkoLightbox({
+                    always_show_close: true
+                });
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
